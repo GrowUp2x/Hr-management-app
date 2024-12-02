@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>HR Management System</h1>
+</header>
+
+<main>
+    <!-- Employee Search Section -->
+    <section id="employee-search">
+        <input type="text" id="searchEmployee" placeholder="Search by name or position" oninput="searchEmployees()">
+    </section>
+
+    <!-- Employee List -->
+    <section id="employee-list">
+        <h2>Employee List</h2>
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>Profile</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Salary</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button onclick="showAddEmployeeForm()">Add Employee</button>
+    </section>
+
+    <!-- Add Employee Form -->
+    <section id="add-employee-form" style="display: none;">
+        <h2>Add New Employee</h2>
+        <form id="employeeForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" required>
+
+            <label for="position">Position</label>
+            <input type="text" id="position" required>
+
+            <label for="salary">Salary</label>
+            <input type="number" id="salary" required>
+
+            <label for="profilePic">Profile Picture</label>
+            <input type="file" id="profilePic" accept="image/*">
+
+            <button type="submit">Add Employee</button>
+            <button type="button" onclick="cancelAddEmployee()">Cancel</button>
+        </form>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
